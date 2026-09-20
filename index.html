@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devid - About Me</title>
+    <style>
+        :root {
+            --bg: #121214;
+            --surface: #18181b;
+            --border: #27272a;
+            --text: #d1d5db;
+            --text-heading: #f4f4f5;
+            --subtext: #a1a1aa;
+            --accent: #38bdf8;
+            --tag-bg: #27272a;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 3rem 1.5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 680px;
+            width: 100%;
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: var(--text-heading);
+            margin: 0 0 0.5rem 0;
+            font-weight: 600;
+        }
+
+        .handle {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.9rem;
+            color: var(--subtext);
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            color: var(--text-heading);
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.85rem;
+        }
+
+        p {
+            margin: 0 0 1rem 0;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+
+        .tag {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            background: var(--tag-bg);
+            color: var(--text-heading);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border);
+        }
+
+        .links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .links li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Devid</h1>
+            <div class="handle">@devid.bitt.five</div>
+        </header>
+
+        <section>
+            <h2>About</h2>
+            <p>Game developer, programmer, and pixel artist. Interested in procedural generation, horror stuff and modular systems.</p>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <div class="skills">
+                <span class="tag">Luau</span>
+                <span class="tag">Python</span>
+                <span class="tag">Pixel Art</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Links</h2>
+            <ul class="links">
+                <li><a href="https://github.com/Bitter130">GitHub (@Bitter130)</a></li>
+            </ul>
+        </section>
+    </div>
+
+</body>
+</html>
