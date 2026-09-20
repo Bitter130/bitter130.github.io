@@ -33,15 +33,32 @@
         }
 
         header {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
             margin-bottom: 2.5rem;
             border-bottom: 1px solid var(--border);
             padding-bottom: 1.5rem;
         }
 
+        .profile-pic {
+            width: 64px;
+            height: 64px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid var(--border);
+            image-rendering: pixelated; /* Keeps pixel art nice and sharp */
+        }
+
+        .header-text {
+            display: flex;
+            flex-direction: column;
+        }
+
         h1 {
             font-size: 2rem;
             color: var(--text-heading);
-            margin: 0 0 0.5rem 0;
+            margin: 0 0 0.25rem 0;
             font-weight: 600;
         }
 
@@ -56,7 +73,6 @@
         }
 
         h2 {
-            font-size: 1.1rem;
             color: var(--text-heading);
             margin-bottom: 0.75rem;
             text-transform: uppercase;
@@ -109,8 +125,11 @@
 
     <div class="container">
         <header>
-            <h1>Devid</h1>
-            <div class="handle">@devid.bitt.five</div>
+            <img src="profile.png" alt="Devid Profile Picture" class="profile-pic">
+            <div class="header-text">
+                <h1>Devid</h1>
+                <div class="handle">@devid.bitt.five</div>
+            </div>
         </header>
 
         <section>
