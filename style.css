@@ -1,0 +1,35 @@
+/* Core Keyframes for Fluid Entrance */
+@keyframes fluidGrowIn {
+    0% {
+        opacity: 0;
+        transform: translateY(24px) scale(0.96);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Base style for elements that animate on load */
+.animate-item {
+    opacity: 0; /* Keeps element hidden until animation starts */
+    animation: fluidGrowIn 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Sequential Staggering Delays based on page depth (0.1s increments) */
+.animate-item:nth-child(1) { animation-delay: 0.0s; }
+.animate-item:nth-child(2) { animation-delay: 0.1s; }
+.animate-item:nth-child(3) { animation-delay: 0.2s; }
+.animate-item:nth-child(4) { animation-delay: 0.3s; }
+.animate-item:nth-child(5) { animation-delay: 0.4s; }
+.animate-item:nth-child(6) { animation-delay: 0.5s; }
+
+/* Sub-staggering for Skill Tags inside the Skills section */
+.skills .tag {
+    opacity: 0;
+    animation: fluidGrowIn 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.skills .tag:nth-child(1) { animation-delay: 0.35s; }
+.skills .tag:nth-child(2) { animation-delay: 0.45s; }
+.skills .tag:nth-child(3) { animation-delay: 0.55s; }
