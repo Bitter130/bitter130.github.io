@@ -41,14 +41,13 @@
             padding-bottom: 1.5rem;
         }
 
-        /* Container wrapper for 180x180 size with inset shadow */
         .profile-pic-wrapper {
             position: relative;
             width: 180px;
             height: 180px;
             max-width: 100%;
             flex-shrink: 0;
-            border-radius: 20px; /* Rounded corners proportional to 180px */
+            border-radius: 20px;
             overflow: hidden;
         }
 
@@ -57,7 +56,7 @@
             position: absolute;
             inset: 0;
             border-radius: 20px;
-            box-shadow: inset 0 0 0 2px #ffffff; /* White inside border */
+            box-shadow: inset 0 0 0 2px #ffffff;
             pointer-events: none;
         }
 
@@ -146,11 +145,13 @@
             }
         }
     </style>
+    <!-- Link to external animations CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <header>
+        <header class="animate-item">
             <div class="profile-pic-wrapper">
                 <img src="profile.png" alt="Devid Profile Picture" class="profile-pic">
             </div>
@@ -160,12 +161,12 @@
             </div>
         </header>
 
-        <section>
+        <section class="animate-item">
             <h2>About</h2>
             <p>Game developer, programmer, and pixel artist. Interested in procedural generation, horror stuff and modular systems.</p>
         </section>
 
-        <section>
+        <section class="animate-item">
             <h2>Skills</h2>
             <div class="skills">
                 <span class="tag">Luau</span>
@@ -174,7 +175,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="animate-item">
             <h2>Links</h2>
             <ul class="links">
                 <li><a href="https://github.com/Bitter130">GitHub (@Bitter130)</a></li>
