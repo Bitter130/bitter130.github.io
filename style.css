@@ -1,35 +1,294 @@
-/* Core Keyframes for Fluid Entrance */
-@keyframes fluidGrowIn {
+/* =====================================================================
+   Intro sequence — flies over the Windows 7 desktop
+   ===================================================================== */
+
+body.is-intro {
+    overflow: hidden;
+}
+
+.intro {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.5s ease-in, visibility 0s linear 0.5s;
+    /* Windowed desktop behind it, dimmed like a locked session. */
+    background: radial-gradient(circle at 50% 42%, rgba(60, 28, 96, 0.9) 0%, rgba(12, 4, 22, 0.97) 62%);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.intro--gone {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Aero glow blooming behind the pfp. */
+.intro::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 78vmin;
+    height: 78vmin;
+    margin: -39vmin 0 0 -39vmin;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(232, 124, 254, 0.26) 0%, transparent 68%);
+    opacity: 0;
+    transform: scale(0.4);
+    transition: opacity 1s ease-out 0.4s, transform 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.4s;
+}
+
+.intro--stage::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* --- the flying pfp ------------------------------------------------- */
+
+.intro__fly {
+    --size: 104px;
+    --hero: 2.1;
+    --sx: -85vw;
+    --sy: -34vh;
+    --srot: -40deg;
+    --sscale: 0.3;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 6px;
+    opacity: 0;
+    filter: blur(16px);
+    transform: translate(-50%, -50%)
+        translate3d(var(--sx), var(--sy), 0)
+        rotate(var(--srot))
+        scale(var(--sscale));
+    transition:
+        transform 1.5s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.55s ease-out,
+        filter 1.2s ease-out;
+    will-change: transform, opacity, filter;
+}
+
+.intro--stage .intro__fly {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(-50%, -50%) translate3d(0, 0, 0) rotate(0deg) scale(var(--hero));
+}
+
+.intro--exit .intro__fly {
+    transform: translate(-50%, -50%)
+        translate3d(var(--tx, 0px), var(--ty, 0px), 0)
+        rotate(0deg)
+        scale(1);
+    transition: transform 0.95s cubic-bezier(0.55, 0, 0.2, 1), opacity 0.45s ease-in 0.8s;
+}
+
+.intro__pfp {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+    user-select: none;
+    -webkit-user-drag: none;
+    /* Matches the avatar's drop shadow so the landing reads as one object. */
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35), 0 10px 34px rgba(0, 0, 0, 0.55);
+}
+
+@keyframes introPulse {
+    0%   { transform: scale(1); }
+    45%  { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.intro__fly--rest .intro__pfp {
+    animation: introPulse 0.6s ease-out;
+}
+
+/* --- landing shockwave + sparks -------------------------------------- */
+
+.intro__fx {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.ring,
+.spark {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+}
+
+.ring {
+    width: var(--size, 104px);
+    height: var(--size, 104px);
+    margin: calc(var(--size, 104px) / -2) 0 0 calc(var(--size, 104px) / -2);
+    border-radius: 50%;
+    border: 1.5px solid var(--accent-bright);
+    transform: scale(0.35);
+}
+
+.spark {
+    width: 7px;
+    height: 7px;
+    margin: -3.5px 0 0 -3.5px;
+    border-radius: 2px;
+    background: #fff;
+    box-shadow: 0 0 12px rgba(232, 124, 254, 0.95);
+}
+
+@keyframes ringBurst {
+    0%   { opacity: 0;   transform: scale(0.35); }
+    18%  { opacity: 0.9; }
+    100% { opacity: 0;   transform: scale(2.4); }
+}
+
+@keyframes sparkBurst {
+    0%   { opacity: 0; transform: translate(0, 0) rotate(0deg) scale(0.4); }
+    15%  { opacity: 1; }
+    100% { opacity: 0; transform: translate(var(--dx), var(--dy)) rotate(220deg) scale(1.1); }
+}
+
+.intro--landed .ring--1 { animation: ringBurst 0.85s cubic-bezier(0.16, 1, 0.3, 1); }
+.intro--landed .ring--2 { animation: ringBurst 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.12s; }
+
+.intro--landed .spark--1 { animation: sparkBurst 0.7s ease-out;       --dx: -150px; --dy: -90px; }
+.intro--landed .spark--2 { animation: sparkBurst 0.7s ease-out 0.06s; --dx: 140px;  --dy: -110px; }
+.intro--landed .spark--3 { animation: sparkBurst 0.7s ease-out 0.1s;  --dx: 115px;  --dy: 100px; }
+.intro--landed .spark--4 { animation: sparkBurst 0.7s ease-out 0.14s; --dx: -130px; --dy: 112px; }
+
+/* --- name + handle --------------------------------------------------- */
+
+.intro__text {
+    --drop: 190px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: min(90vw, 680px);
+    margin-top: var(--drop);
+    text-align: center;
+    opacity: 0;
+    transform: translate(-50%, 14px);
+    transition: opacity 0.4s ease-out, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.intro__text--in {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+/* Name styled as an Aero window title so it belongs to the desktop. */
+.intro__title {
+    display: inline-block;
+    margin: 0;
+    padding: 6px 22px;
+    font-size: clamp(1.6rem, 6vw, 2.6rem);
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    white-space: nowrap;
+    border-radius: 7px 7px 4px 4px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-bottom-color: rgba(0, 0, 0, 0.45);
+    background: linear-gradient(180deg, rgba(140, 168, 214, 0.55) 0%, rgba(52, 72, 108, 0.62) 100%);
+    box-shadow: 0 0 34px rgba(232, 124, 254, 0.4), 0 12px 34px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+@keyframes charIn {
     0% {
         opacity: 0;
-        transform: translateY(24px) scale(0.96);
+        transform: translateY(0.4em) rotateX(-70deg);
+        filter: blur(6px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0) scale(1);
+        transform: translateY(0) rotateX(0deg);
+        filter: blur(0);
     }
 }
 
-/* Base style for elements that animate on load */
-.animate-item {
-    opacity: 0; /* Keeps element hidden until animation starts */
-    animation: fluidGrowIn 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-/* Sequential Staggering Delays based on page depth (0.1s increments) */
-.animate-item:nth-child(1) { animation-delay: 0.0s; }
-.animate-item:nth-child(2) { animation-delay: 0.1s; }
-.animate-item:nth-child(3) { animation-delay: 0.2s; }
-.animate-item:nth-child(4) { animation-delay: 0.3s; }
-.animate-item:nth-child(5) { animation-delay: 0.4s; }
-.animate-item:nth-child(6) { animation-delay: 0.5s; }
-
-/* Sub-staggering for Skill Tags inside the Skills section */
-.skills .tag {
+/* Letters stay frozen until .intro__text--in lands, otherwise they would
+   animate invisibly behind the hidden caption and be finished on arrival. */
+.intro__char {
+    display: inline-block;
     opacity: 0;
-    animation: fluidGrowIn 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transform-origin: 50% 100%;
 }
 
-.skills .tag:nth-child(1) { animation-delay: 0.35s; }
-.skills .tag:nth-child(2) { animation-delay: 0.45s; }
-.skills .tag:nth-child(3) { animation-delay: 0.55s; }
+.intro__text--in .intro__char {
+    animation: charIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: calc(var(--i) * 75ms);
+}
+
+.intro__handle {
+    display: inline-block;
+    margin: 12px 0 0 0;
+    padding: 3px 12px;
+    font-family: var(--mono);
+    font-size: clamp(0.8rem, 3vw, 0.95rem);
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(20, 12, 34, 0.55);
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* Trails the name so it lands once the last letter has settled. */
+.intro__text--in .intro__handle {
+    animation: fluidGrowIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.55s forwards;
+}
+
+@keyframes fluidGrowIn {
+    0%   { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* --- skip hint -------------------------------------------------------- */
+
+.intro__hint {
+    position: absolute;
+    bottom: 2.4rem;
+    padding: 4px 14px;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #e9dcf7;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    background: rgba(20, 12, 34, 0.5);
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+}
+
+.intro__hint--live {
+    opacity: 0.75;
+    animation: hintPulse 2.4s ease-in-out 1.6s infinite;
+}
+
+@keyframes hintPulse {
+    0%, 100% { opacity: 0.4; }
+    50%      { opacity: 0.85; }
+}
+
+/* Dim the caption during the exit flight so the pfp reads as the subject. */
+.intro--exit .intro__text,
+.intro--exit .intro__hint {
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
