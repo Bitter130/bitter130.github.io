@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Gallery - Devid (@devid.bitt.five)</title>
+    <link rel="icon" href="../profile.png">
+    <link rel="stylesheet" href="games.css">
+</head>
+<body>
+
+    <!-- ============ DESKTOP ============ -->
+    <main class="desktop" id="desktop">
+
+        <div class="window-layer" id="windowLayer">
+
+            <!-- ============ EXPLORER HEADER & NAVIGATION ============ -->
+            <section class="win" data-win="Games Explorer" style="--float-dur: 7.2s; --float-delay: 0s; --drift-x: 6px; --drift-y: -10px; --tilt: 2.8deg; --yaw: 0.22; --roll: 0.9deg; --z-front: 22px; --z-back: -26px; --reveal-delay: 0.05s;">
+                <header class="win__bar">
+                    <span class="win__icon" aria-hidden="true">&#127918;</span>
+                    <span class="win__title">Games Explorer - C:\Users\Devid\Games</span>
+                    <span class="win__ctrls">
+                        <button class="win__btn win__btn--min" type="button" aria-label="Minimize"><i></i></button>
+                        <button class="win__btn win__btn--max" type="button" aria-label="Maximize"><i></i></button>
+                        <button class="win__btn win__btn--close" type="button" aria-label="Close"><i></i></button>
+                    </span>
+                </header>
+
+                <!-- Navigation Bar -->
+                <div class="explorer-nav">
+                    <a href="../" class="explorer-btn explorer-btn--back" title="Return to Desktop Profile">
+                        &#9664; Desktop
+                    </a>
+                    <button class="explorer-btn" type="button" id="refreshBtn" title="Refresh Game List">
+                        &#8635;
+                    </button>
+                    <div class="address-bar" title="Current Directory Location">
+                        <span class="address-bar__crumb">&#128187; Computer <span>&#9654;</span></span>
+                        <span class="address-bar__crumb">BitterOS (C:) <span>&#9654;</span></span>
+                        <span class="address-bar__crumb">Users <span>&#9654;</span></span>
+                        <span class="address-bar__crumb">Devid <span>&#9654;</span></span>
+                        <span class="address-bar__crumb">&#127918; Games</span>
+                    </div>
+                    <div class="explorer-search">
+                        <input type="text" id="gameSearch" placeholder="Search games, tags, engines..." autocomplete="off">
+                        <span class="explorer-search__icon">&#128269;</span>
+                    </div>
+                </div>
+
+                <!-- Filter Toolbar -->
+                <div class="explorer-toolbar">
+                    <div class="filter-group">
+                        <span class="filter-label">Filter:</span>
+                        <button class="filter-chip is-active" data-filter="all" type="button">All (6)</button>
+                        <button class="filter-chip" data-filter="Horror" type="button">Horror</button>
+                        <button class="filter-chip" data-filter="Procedural" type="button">Procedural</button>
+                        <button class="filter-chip" data-filter="Luau" type="button">Luau</button>
+                        <button class="filter-chip" data-filter="Python" type="button">Python</button>
+                        <button class="filter-chip" data-filter="Modular" type="button">Modular</button>
+                        <button class="filter-chip" data-filter="Pixel Art" type="button">Pixel Art</button>
+                    </div>
+                    <div class="view-actions">
+                        <button class="explorer-btn" type="button" id="copyBlankTemplateBtn" title="Copy clean HTML template for new game">
+                            &#128203; Blank Template
+                        </button>
+                        <button class="explorer-btn" type="button" id="shuffleFloatBtn" title="Randomize 3D drift & tilt">
+                            &#127922; Tilt FX
+                        </button>
+                    </div>
+                </div>
+
+                <div class="win__body" style="padding-bottom: 6px;">
+                    <p style="margin: 0; font-size: 13px; color: var(--ink-soft); line-height: 1.5;">
+                        Welcome to the <strong>Game Gallery</strong>. Below is a collection of 6 game templates, prototypes, and jam projects focusing on procedural generation, atmospheric horror, and modular engine architecture. Click <strong>Launch Demo</strong> for an interactive simulation or <strong>Copy Template</strong> to duplicate any game entry.
+                    </p>
+                    <div class="statusbar" style="margin-top: 8px;">
+                        <span id="matchCounter">6 items found</span>
+                        <span>View: Interactive List</span>
+                        <span>Directory: /games/</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ GAME 1: ABYSSAL DESCENT ============ -->
+            <!-- GAME TEMPLATE 1 START -->
+            <section class="win game-card" data-win="Abyssal Descent" data-tags="Horror,Procedural,Luau,Modular" style="--float-dur: 7.6s; --float-delay: -0.4s; --drift-x: 10px; --drift-y: -14px; --tilt: 3.8deg; --yaw: 0.28; --roll: 1.2deg; --z-front: 20px; --z-back: -28px; --reveal-delay: 0.12s;">
+                <header class="win__bar">
+                    <span class="win__icon" aria-hidden="true">&#9670;</span>
+                    <span class="win__title">Abyssal Descent: Trench 9 (v0.4.2)</span>
+                    <span class="win__ctrls">
+                        <button class="win__btn win__btn--min" type="button" aria-label="Minimize"><i></i></button>
+                        <button class="win__btn win__btn--max" type="button" aria-label="Maximize"><i></i></button>
+                        <button class="win__btn win__btn--close" type="button" aria-label="Close"><i></i></button>
+                    </span>
+                </header>
+                <div class="win__body">
+                    <div class="game-layout">
+                        <!-- Sidebar: Thumbnail + Quick Specs -->
+                        <div class="game-sidebar">
+                            <div class="game-thumb" data-demo="sonar" title="Click to launch interactive Sonar Demo">
+                                <!-- Bespoke SVG Sonar Radar Illustration -->
+                                <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abyssal Descent Sonar Screen">
+                                    <rect width="320" height="200" fill="#040b14"/>
+                                    <!-- Oceanic Depth Gradient -->
+                                    <radialGradient id="oceanGlow" cx="50%" cy="50%" r="50%">
+                                        <stop offset="0%" stop-color="#0e3d4f" stop-opacity="0.8"/>
+                                        <stop offset="100%" stop-color="#02070c" stop-opacity="1"/>
+                                    </radialGradient>
+                                    <circle cx="160" cy="100" r="85" fill="url(#oceanGlow)"/>
+                                    <!-- Radar Grid Rings -->
+                                    <circle cx="160" cy="100" r="80" fill="none" stroke="#00e5ff" stroke-width="1.2" stroke-opacity="0.5"/>
+                                    <circle cx="160" cy="100" r="55" fill="none" stroke="#00e5ff" stroke-width="0.8" stroke-dasharray="3 3" stroke-opacity="0.4"/>
+                                    <circle cx="160" cy="100" r="30" fill="none" stroke="#00e5ff" stroke-width="0.8" stroke-opacity="0.3"/>
+                                    <!-- Crosshairs -->
+                                    <line x1="80" y1="100" x2="240" y2="100" stroke="#00e5ff" stroke-width="0.7" stroke-opacity="0.4"/>
+                                    <line x1="160" y1="20" x2="160" y2="180" stroke="#00e5ff" stroke-width="0.7" stroke-opacity="0.4"/>
+                                    <!-- Sonar Sweep Line -->
+                                    <line x1="160" y1="100" x2="225" y2="45" stroke="#7df9ff" stroke-width="2" stroke-opacity="0.9"/>
+                                    <polygon points="160,100 225,45 240,65" fill="#00e5ff" fill-opacity="0.15"/>
+                                    <!-- Bioluminescent Deep Organism Silhouette -->
+                                    <path d="M 95 125 Q 110 115 130 120 T 150 140" fill="none" stroke="#e87cfe" stroke-width="2.5" stroke-dasharray="4 2"/>
+                                    <circle cx="95" cy="125" r="3" fill="#ff4081"/>
+                                    <circle cx="210" cy="75" r="2.5" fill="#ffd700"/>
+                                    <circle cx="185" cy="135" r="2" fill="#00e5ff"/>
+                                    <!-- HUD Text -->
+                                    <text x="12" y="22" fill="#00e5ff" font-family="monospace" font-size="10" font-weight="bold">DEPTH: -3,840m</text>
+                                    <text x="12" y="36" fill="#e87cfe" font-family="monospace" font-size="9">OXYGEN: 88%</text>
+                                    <text x="240" y="22" fill="#ff5252" font-family="monospace" font-size="9" text-anchor="end">ALERT: ECHO DETECTED</text>
+                                </svg>
+                                <div class="game-thumb__play">
+                                    <span class="play-badge">&#9658; Launch Sonar Demo</span>
+                                </div>
+                            </div>
+                            <div class="quick-specs">
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Engine:</span>
+                                    <span class="quick-spec-val">Luau / Modular</span>
+                                </div>
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Genre:</span>
+                                    <span class="quick-spec-val">Horror / Roguelike</span>
+                                </div>
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Perspective:</span>
+                                    <span class="quick-spec-val">1st Person Cockpit</span>
+                                </div>
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Status:</span>
+                                    <span class="quick-spec-val">Alpha v0.4.2</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Info, Features & Actions -->
+                        <div class="game-content">
+                            <div class="game-header">
+                                <div class="game-title-row">
+                                    <h2 class="game-title">Abyssal Descent: Trench 9</h2>
+                                    <span class="game-status-badge status--alpha">ALPHA v0.4.2</span>
+                                </div>
+                                <div class="game-tags">
+                                    <span class="tag tag--featured">Luau</span>
+                                    <span class="tag">Procedural Generation</span>
+                                    <span class="tag">Horror</span>
+                                    <span class="tag">Modular Systems</span>
+                                </div>
+                            </div>
+
+                            <p class="game-desc">
+                                Pilot an experimental modular bathysphere into an ever-deepening oceanic trench generated in real time using 3D cellular automata. Balance battery reserves, cabin oxygen, and acoustic sonar pings while evading abyssal apex predators that hunt exclusively by sound reverberation.
+                            </p>
+
+                            <ul class="game-features">
+                                <li><span class="check">&#10003;</span> Real-time hydroacoustic sonar occlusion & dynamic echo simulation</li>
+                                <li><span class="check">&#10003;</span> Procedurally generated infinite oceanic chasms & hydrothermal vents</li>
+                                <li><span class="check">&#10003;</span> Modular hull subsystem repair and manual electrical breaker routing</li>
+                            </ul>
+
+                            <div class="game-actions">
+                                <button class="aero-btn aero-btn--primary" type="button" data-launch="sonar">
+                                    &#9658; Launch Demo
+                                </button>
+                                <a href="https://github.com/Bitter130" target="_blank" rel="noopener noreferrer" class="aero-btn">
+                                    &#128187; Source Code
+                                </a>
+                                <button class="aero-btn aero-btn--copy" type="button" data-copy-id="1">
+                                    &#128203; Copy Template
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="statusbar">
+                        <span>Status: Playable Alpha</span>
+                        <span>Engine: Luau</span>
+                        <span>Occlusion: 3D Raycast</span>
+                        <span>Build: 2026.10</span>
+                    </div>
+                </div>
+            </section>
+            <!-- GAME TEMPLATE 1 END -->
+
+
+            <!-- ============ GAME 2: CHRONO SHIFT ============ -->
+            <!-- GAME TEMPLATE 2 START -->
+            <section class="win game-card" data-win="Chrono Shift" data-tags="Python,Pixel Art,Modular" style="--float-dur: 8.8s; --float-delay: -1.8s; --drift-x: -12px; --drift-y: -11px; --tilt: 4.8deg; --yaw: -0.32; --roll: -1.5deg; --z-front: 24px; --z-back: -32px; --reveal-delay: 0.18s;">
+                <header class="win__bar">
+                    <span class="win__icon" aria-hidden="true">&#9670;</span>
+                    <span class="win__title">Chrono Shift: Outpost 9 (v0.9.1)</span>
+                    <span class="win__ctrls">
+                        <button class="win__btn win__btn--min" type="button" aria-label="Minimize"><i></i></button>
+                        <button class="win__btn win__btn--max" type="button" aria-label="Maximize"><i></i></button>
+                        <button class="win__btn win__btn--close" type="button" aria-label="Close"><i></i></button>
+                    </span>
+                </header>
+                <div class="win__body">
+                    <div class="game-layout">
+                        <!-- Sidebar -->
+                        <div class="game-sidebar">
+                            <div class="game-thumb" data-demo="time" title="Click to launch interactive Time Particle Demo">
+                                <!-- Bespoke SVG Chrono Shift Illustration -->
+                                <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chrono Shift Time Rift Screen">
+                                    <rect width="320" height="200" fill="#0d0819"/>
+                                    <!-- Stars Background -->
+                                    <g fill="#ffffff" opacity="0.7">
+                                        <circle cx="25" cy="30" r="1"/><circle cx="70" cy="18" r="1.5"/><circle cx="110" cy="45" r="0.8"/>
+                                        <circle cx="280" cy="35" r="1.2"/><circle cx="240" cy="15" r="1"/><circle cx="295" cy="75" r="0.8"/>
+                                    </g>
+                                    <!-- Broken Lunar Base Platform -->
+                                    <rect x="0" y="155" width="320" height="45" fill="#1b122e"/>
+                                    <line x1="0" y1="155" x2="320" y2="155" stroke="#a855f7" stroke-width="2"/>
+                                    <!-- Temporal Vortex -->
+                                    <ellipse cx="160" cy="100" rx="70" ry="40" fill="none" stroke="#e87cfe" stroke-width="2" stroke-dasharray="6 3"/>
+                                    <ellipse cx="160" cy="100" rx="45" ry="25" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+                                    <ellipse cx="160" cy="100" rx="20" ry="12" fill="#e87cfe" opacity="0.4"/>
+                                    <!-- Pixel Astronaut Silhouette -->
+                                    <rect x="75" y="125" width="12" height="20" fill="#ffffff" rx="2"/>
+                                    <rect x="79" y="127" width="8" height="6" fill="#38bdf8" rx="1"/>
+                                    <line x1="81" y1="145" x2="77" y2="155" stroke="#ffffff" stroke-width="3"/>
+                                    <line x1="85" y1="145" x2="89" y2="155" stroke="#ffffff" stroke-width="3"/>
+                                    <!-- Temporal Ghost / Echo Silhouette -->
+                                    <rect x="110" y="115" width="12" height="20" fill="#a855f7" opacity="0.5" rx="2"/>
+                                    <!-- Floating Debris -->
+                                    <polygon points="195,85 205,80 200,95" fill="#c084fc"/>
+                                    <polygon points="220,110 230,105 225,120" fill="#38bdf8"/>
+                                    <!-- HUD Text -->
+                                    <text x="12" y="22" fill="#e87cfe" font-family="monospace" font-size="10" font-weight="bold">TIMELINE: -00:04.28s</text>
+                                    <text x="308" y="22" fill="#38bdf8" font-family="monospace" font-size="9" text-anchor="end">STATUS: REWIND ACTIVE</text>
+                                </svg>
+                                <div class="game-thumb__play">
+                                    <span class="play-badge">&#9658; Launch Time Demo</span>
+                                </div>
+                            </div>
+                            <div class="quick-specs">
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Engine:</span>
+                                    <span class="quick-spec-val">Python / Pygame CE</span>
+                                </div>
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Genre:</span>
+                                    <span class="quick-spec-val">Action Platformer</span>
+                                </div>
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Perspective:</span>
+                                    <span class="quick-spec-val">2D Pixel Scroller</span>
+                                </div>
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Status:</span>
+                                    <span class="quick-spec-val">Beta v0.9.1</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="game-content">
+                            <div class="game-header">
+                                <div class="game-title-row">
+                                    <h2 class="game-title">Chrono Shift: Outpost 9</h2>
+                                    <span class="game-status-badge status--dev">BETA v0.9.1</span>
+                                </div>
+                                <div class="game-tags">
+                                    <span class="tag tag--featured">Python</span>
+                                    <span class="tag">Pixel Art</span>
+                                    <span class="tag">Modular Systems</span>
+                                    <span class="tag">Platformer</span>
+                                </div>
+                            </div>
+
+                            <p class="game-desc">
+                                A fast-paced 2D sci-fi action platformer set inside a collapsing orbital research station. Harness a localized quantum chronometer to freeze laser barriers, rewind falling platforms, and project temporal echoes of yourself to solve multi-lever puzzles across two overlapping eras.
+                            </p>
+
+                            <ul class="game-features">
+                                <li><span class="check">&#10003;</span> Millisecond-accurate localized time rewind & echo playback buffer</li>
+                                <li><span class="check">&#10003;</span> 16-bit handcrafted pixel aesthetic with CRT scanline simulation</li>
+                                <li><span class="check">&#10003;</span> Modular weapon modification system with socketable quantum chips</li>
+                            </ul>
+
+                            <div class="game-actions">
+                                <button class="aero-btn aero-btn--primary" type="button" data-launch="time">
+                                    &#9658; Launch Demo
+                                </button>
+                                <a href="https://github.com/Bitter130" target="_blank" rel="noopener noreferrer" class="aero-btn">
+                                    &#128187; Source Code
+                                </a>
+                                <button class="aero-btn aero-btn--copy" type="button" data-copy-id="2">
+                                    &#128203; Copy Template
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="statusbar">
+                        <span>Status: Beta Candidate</span>
+                        <span>Language: Python 3.12</span>
+                        <span>Framerate: 60 FPS Target</span>
+                        <span>Sectors: 12 Finished</span>
+                    </div>
+                </div>
+            </section>
+            <!-- GAME TEMPLATE 2 END -->
+
+
+            <!-- ============ GAME 3: VOID WALKER ============ -->
+            <!-- GAME TEMPLATE 3 START -->
+            <section class="win game-card" data-win="Void Walker" data-tags="Luau,Procedural,Pixel Art" style="--float-dur: 7.9s; --float-delay: -3.2s; --drift-x: 14px; --drift-y: -16px; --tilt: 3.4deg; --yaw: 0.38; --roll: 1.0deg; --z-front: 18px; --z-back: -24px; --reveal-delay: 0.24s;">
+                <header class="win__bar">
+                    <span class="win__icon" aria-hidden="true">&#9670;</span>
+                    <span class="win__title">Void Walker: Catacombs (Jam Winner)</span>
+                    <span class="win__ctrls">
+                        <button class="win__btn win__btn--min" type="button" aria-label="Minimize"><i></i></button>
+                        <button class="win__btn win__btn--max" type="button" aria-label="Maximize"><i></i></button>
+                        <button class="win__btn win__btn--close" type="button" aria-label="Close"><i></i></button>
+                    </span>
+                </header>
+                <div class="win__body">
+                    <div class="game-layout">
+                        <!-- Sidebar -->
+                        <div class="game-sidebar">
+                            <div class="game-thumb" data-demo="dungeon" title="Click to launch interactive Procedural Dungeon Generator">
+                                <!-- Bespoke SVG Dungeon Illustration -->
+                                <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Void Walker Dungeon Chamber">
+                                    <rect width="320" height="200" fill="#100b1a"/>
+                                    <!-- Isometric Stone Dungeon Floor Tiles -->
+                                    <g stroke="#322247" stroke-width="1" fill="#1b122e">
+                                        <polygon points="160,30 220,60 160,90 100,60"/>
+                                        <polygon points="100,60 160,90 100,120 40,90"/>
+                                        <polygon points="220,60 280,90 220,120 160,90"/>
+                                        <polygon points="160,90 220,120 160,150 100,120"/>
+                                        <polygon points="100,120 160,150 100,180 40,150"/>
+                                        <polygon points="220,120 280,150 220,180 160,150"/>
+                                    </g>
+                                    <!-- Glowing Void Portal in Center -->
+                                    <ellipse cx="160" cy="105" rx="35" ry="18" fill="#672b89" opacity="0.8"/>
+                                    <ellipse cx="160" cy="105" rx="20" ry="10" fill="#e87cfe"/>
+                                    <ellipse cx="160" cy="105" rx="8" ry="4" fill="#ffffff"/>
+                                    <!-- Torches & Flame Particles -->
+                                    <circle cx="85" cy="55" r="4" fill="#ffb703"/><circle cx="85" cy="52" r="2" fill="#fb8500"/>
+                                    <circle cx="235" cy="55" r="4" fill="#ffb703"/><circle cx="235" cy="52" r="2" fill="#fb8500"/>
+                                    <!-- Pixel Dungeon Hero -->
+                                    <rect x="156" y="130" width="8" height="14" fill="#cbd5e1"/>
+                                    <rect x="164" y="132" width="2" height="10" fill="#38bdf8"/> <!-- sword -->
+                                    <rect x="154" y="134" width="3" height="6" fill="#64748b"/> <!-- shield -->
+                                    <!-- HUD Text -->
+                                    <text x="12" y="22" fill="#fbbf24" font-family="monospace" font-size="10" font-weight="bold">FLOOR: B7 (BSP-TREE)</text>
+                                    <text x="308" y="22" fill="#e87cfe" font-family="monospace" font-size="9" text-anchor="end">SEED: #9482-VOID</text>
+                                </svg>
+                                <div class="game-thumb__play">
+                                    <span class="play-badge">&#9658; Generate Dungeon</span>
+                                </div>
+                            </div>
+                            <div class="quick-specs">
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Engine:</span>
+                                    <span class="quick-spec-val">Luau Framework</span>
+                                </div>
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Genre:</span>
+                                    <span class="quick-spec-val">Procedural Roguelike</span>
+                                </div>
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Generation:</span>
+                                    <span class="quick-spec-val">BSP + Automata</span>
+                                </div>
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Status:</span>
+                                    <span class="quick-spec-val">Jam Winner 48h</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="game-content">
+                            <div class="game-header">
+                                <div class="game-title-row">
+                                    <h2 class="game-title">Void Walker: Catacombs</h2>
+                                    <span class="game-status-badge status--jam">&#9733; JAM WINNER</span>
+                                </div>
+                                <div class="game-tags">
+                                    <span class="tag tag--featured">Luau</span>
+                                    <span class="tag">Procedural Generation</span>
+                                    <span class="tag">Pixel Art</span>
+                                    <span class="tag">Roguelike</span>
+                                </div>
+                            </div>
+
+                            <p class="game-desc">
+                                A ruthless roguelike dungeon crawler constructed using a modular Binary Space Partitioning (BSP) generator. Features 240+ room templates, tactical turn-based grid combat, dynamic light propagation, and an emergent curse/blessing system designed for infinite replayability.
+                            </p>
+
+                            <ul class="game-features">
+                                <li><span class="check">&#10003;</span> Binary Space Partitioning (BSP) & Wave Function Collapse hybrid generation</li>
+                                <li><span class="check">&#10003;</span> Dynamic 2D raycast lighting and tile-based line-of-sight fog-of-war</li>
+                                <li><span class="check">&#10003;</span> Fully modular spell-crafting system combining elemental runes</li>
+                            </ul>
+
+                            <div class="game-actions">
+                                <button class="aero-btn aero-btn--primary" type="button" data-launch="dungeon">
+                                    &#9658; Generate Dungeon
+                                </button>
+                                <a href="https://github.com/Bitter130" target="_blank" rel="noopener noreferrer" class="aero-btn">
+                                    &#128187; Source Code
+                                </a>
+                                <button class="aero-btn aero-btn--copy" type="button" data-copy-id="3">
+                                    &#128203; Copy Template
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="statusbar">
+                        <span>Status: Jam Winner (1st Place)</span>
+                        <span>Engine: Luau</span>
+                        <span>Seed Algorithm: BSP Split v2</span>
+                        <span>Rooms: 240+</span>
+                    </div>
+                </div>
+            </section>
+            <!-- GAME TEMPLATE 3 END -->
+
+
+            <!-- ============ GAME 4: ECHOES OF STATIC ============ -->
+            <!-- GAME TEMPLATE 4 START -->
+            <section class="win game-card" data-win="Echoes of Static" data-tags="Python,Horror,Pixel Art" style="--float-dur: 8.4s; --float-delay: -4.6s; --drift-x: -14px; --drift-y: -12px; --tilt: 4.2deg; --yaw: -0.26; --roll: -1.3deg; --z-front: 22px; --z-back: -30px; --reveal-delay: 0.30s;">
+                <header class="win__bar">
+                    <span class="win__icon" aria-hidden="true">&#9670;</span>
+                    <span class="win__title">Echoes of Static (In Development)</span>
+                    <span class="win__ctrls">
+                        <button class="win__btn win__btn--min" type="button" aria-label="Minimize"><i></i></button>
+                        <button class="win__btn win__btn--max" type="button" aria-label="Maximize"><i></i></button>
+                        <button class="win__btn win__btn--close" type="button" aria-label="Close"><i></i></button>
+                    </span>
+                </header>
+                <div class="win__body">
+                    <div class="game-layout">
+                        <!-- Sidebar -->
+                        <div class="game-sidebar">
+                            <div class="game-thumb" data-demo="static" title="Click to launch interactive Radio Frequency Oscilloscope">
+                                <!-- Bespoke SVG Analog Horror Screen -->
+                                <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Echoes of Static Radio Monitor">
+                                    <rect width="320" height="200" fill="#040c06"/>
+                                    <!-- Oscilloscope Grid -->
+                                    <g stroke="#1b4d24" stroke-width="0.8" opacity="0.6">
+                                        <line x1="0" y1="50" x2="320" y2="50"/>
+                                        <line x1="0" y1="100" x2="320" y2="100"/>
+                                        <line x1="0" y1="150" x2="320" y2="150"/>
+                                        <line x1="80" y1="0" x2="80" y2="200"/>
+                                        <line x1="160" y1="0" x2="160" y2="200"/>
+                                        <line x1="240" y1="0" x2="240" y2="200"/>
+                                    </g>
+                                    <!-- Pine Trees Silhouette at Night -->
+                                    <polygon points="20,180 35,120 50,180" fill="#061a0b"/>
+                                    <polygon points="45,190 65,110 85,190" fill="#031207"/>
+                                    <polygon points="250,185 270,115 290,185" fill="#061a0b"/>
+                                    <polygon points="280,195 295,130 310,195" fill="#031207"/>
+                                    <!-- Green Glowing Audio Waveform (Spectrogram Spike) -->
+                                    <path d="M 0 100 Q 30 100 50 95 T 80 105 T 110 98 T 130 102 T 140 30 T 145 170 T 150 40 T 155 160 T 160 100 T 190 102 T 220 95 T 260 104 T 320 100" fill="none" stroke="#39ff14" stroke-width="2.2" filter="drop-shadow(0 0 4px #22c55e)"/>
+                                    <!-- Surveillance Timestamp & Red Rec Dot -->
+                                    <circle cx="20" cy="22" r="5" fill="#ef4444"/>
+                                    <text x="32" y="26" fill="#ef4444" font-family="monospace" font-size="10" font-weight="bold">REC</text>
+                                    <text x="120" y="26" fill="#39ff14" font-family="monospace" font-size="10">03:42:19 AM EST</text>
+                                    <text x="308" y="26" fill="#39ff14" font-family="monospace" font-size="9" text-anchor="end">FREQ: 142.85 MHz</text>
+                                </svg>
+                                <div class="game-thumb__play">
+                                    <span class="play-badge">&#9658; Scan Frequencies</span>
+                                </div>
+                            </div>
+                            <div class="quick-specs">
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Engine:</span>
+                                    <span class="quick-spec-val">Python / C++ Audio</span>
+                                </div>
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Genre:</span>
+                                    <span class="quick-spec-val">Analog Psych Horror</span>
+                                </div>
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Perspective:</span>
+                                    <span class="quick-spec-val">1st Person Analog</span>
+                                </div>
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Status:</span>
+                                    <span class="quick-spec-val">In Development</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="game-content">
+                            <div class="game-header">
+                                <div class="game-title-row">
+                                    <h2 class="game-title">Echoes of Static</h2>
+                                    <span class="game-status-badge status--dev">DEV IN PROGRESS</span>
+                                </div>
+                                <div class="game-tags">
+                                    <span class="tag tag--featured">Python</span>
+                                    <span class="tag">Horror</span>
+                                    <span class="tag">Pixel Art</span>
+                                    <span class="tag">Analog Audio</span>
+                                </div>
+                            </div>
+
+                            <p class="game-desc">
+                                Late-night psychological analog horror. As the lone operator of an isolated fire lookout tower during a geomagnetic blackout, monitor shortwave radio frequencies, calibrate antennae azimuths, and record cryptic broadcasts while securing the perimeter against whatever is knocking on the glass.
+                            </p>
+
+                            <ul class="game-features">
+                                <li><span class="check">&#10003;</span> Real-time Fast Fourier Transform (FFT) spectrogram deciphering mechanics</li>
+                                <li><span class="check">&#10003;</span> Dynamic atmospheric weather and 3D spatial radio interference physics</li>
+                                <li><span class="check">&#10003;</span> Modular narrative event engine driven by player radio frequency tuning</li>
+                            </ul>
+
+                            <div class="game-actions">
+                                <button class="aero-btn aero-btn--primary" type="button" data-launch="static">
+                                    &#9658; Scan Frequencies
+                                </button>
+                                <a href="https://github.com/Bitter130" target="_blank" rel="noopener noreferrer" class="aero-btn">
+                                    &#128187; Source Code
+                                </a>
+                                <button class="aero-btn aero-btn--copy" type="button" data-copy-id="4">
+                                    &#128203; Copy Template
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="statusbar">
+                        <span>Status: Active Production</span>
+                        <span>Audio Engine: Custom FFT</span>
+                        <span>Target: PC / Windows</span>
+                        <span>Expected: 2027</span>
+                    </div>
+                </div>
+            </section>
+            <!-- GAME TEMPLATE 4 END -->
+
+
+            <!-- ============ GAME 5: MODULAR ORBITAL ============ -->
+            <!-- GAME TEMPLATE 5 START -->
+            <section class="win game-card" data-win="Modular Orbital" data-tags="Luau,Modular,Procedural" style="--float-dur: 7.2s; --float-delay: -2.1s; --drift-x: 11px; --drift-y: -15px; --tilt: 3.9deg; --yaw: 0.31; --roll: 1.4deg; --z-front: 21px; --z-back: -27px; --reveal-delay: 0.36s;">
+                <header class="win__bar">
+                    <span class="win__icon" aria-hidden="true">&#9670;</span>
+                    <span class="win__title">Modular Orbital: Zero-G (Prototype v0.2.0)</span>
+                    <span class="win__ctrls">
+                        <button class="win__btn win__btn--min" type="button" aria-label="Minimize"><i></i></button>
+                        <button class="win__btn win__btn--max" type="button" aria-label="Maximize"><i></i></button>
+                        <button class="win__btn win__btn--close" type="button" aria-label="Close"><i></i></button>
+                    </span>
+                </header>
+                <div class="win__body">
+                    <div class="game-layout">
+                        <!-- Sidebar -->
+                        <div class="game-sidebar">
+                            <div class="game-thumb" data-demo="orbital" title="Click to launch interactive Orbital Physics Simulator">
+                                <!-- Bespoke SVG Space Station Illustration -->
+                                <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Modular Orbital Space Station">
+                                    <rect width="320" height="200" fill="#060212"/>
+                                    <!-- Planet Horizon Gradient -->
+                                    <radialGradient id="planetGrad" cx="50%" cy="140%" r="90%">
+                                        <stop offset="0%" stop-color="#4f1d74"/>
+                                        <stop offset="60%" stop-color="#1e1038"/>
+                                        <stop offset="100%" stop-color="#060212"/>
+                                    </radialGradient>
+                                    <ellipse cx="160" cy="240" rx="220" ry="120" fill="url(#planetGrad)"/>
+                                    <!-- Planet Rings -->
+                                    <ellipse cx="160" cy="240" rx="280" ry="50" fill="none" stroke="#e87cfe" stroke-width="1.8" opacity="0.4"/>
+                                    <!-- Central Modular Habitat Core -->
+                                    <rect x="135" y="70" width="50" height="28" fill="#e2e8f0" rx="4" stroke="#94a3b8" stroke-width="1.5"/>
+                                    <!-- Docking Ports -->
+                                    <rect x="150" y="56" width="20" height="14" fill="#64748b" rx="2"/>
+                                    <circle cx="160" cy="63" r="3" fill="#38bdf8"/>
+                                    <!-- Cross Trusses -->
+                                    <line x1="60" y1="84" x2="135" y2="84" stroke="#94a3b8" stroke-width="3"/>
+                                    <line x1="185" y1="84" x2="260" y2="84" stroke="#94a3b8" stroke-width="3"/>
+                                    <!-- Solar Array Wings Left -->
+                                    <rect x="60" y="65" width="30" height="38" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
+                                    <line x1="75" y1="65" x2="75" y2="103" stroke="#38bdf8" stroke-width="0.8"/>
+                                    <line x1="60" y1="84" x2="90" y2="84" stroke="#38bdf8" stroke-width="0.8"/>
+                                    <!-- Solar Array Wings Right -->
+                                    <rect x="230" y="65" width="30" height="38" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
+                                    <line x1="245" y1="65" x2="245" y2="103" stroke="#38bdf8" stroke-width="0.8"/>
+                                    <line x1="230" y1="84" x2="260" y2="84" stroke="#38bdf8" stroke-width="0.8"/>
+                                    <!-- HUD Text -->
+                                    <text x="12" y="22" fill="#38bdf8" font-family="monospace" font-size="10" font-weight="bold">ORBIT: 420.5 km</text>
+                                    <text x="308" y="22" fill="#a855f7" font-family="monospace" font-size="9" text-anchor="end">PRESSURE: 101.3 kPa</text>
+                                </svg>
+                                <div class="game-thumb__play">
+                                    <span class="play-badge">&#9658; Launch Sandbox</span>
+                                </div>
+                            </div>
+                            <div class="quick-specs">
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Engine:</span>
+                                    <span class="quick-spec-val">Luau 3D Physics</span>
+                                </div>
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Genre:</span>
+                                    <span class="quick-spec-val">Space Sim Sandbox</span>
+                                </div>
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Perspective:</span>
+                                    <span class="quick-spec-val">Isometric / Orbit 3D</span>
+                                </div>
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Status:</span>
+                                    <span class="quick-spec-val">Prototype v0.2.0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="game-content">
+                            <div class="game-header">
+                                <div class="game-title-row">
+                                    <h2 class="game-title">Modular Orbital: Zero-G</h2>
+                                    <span class="game-status-badge status--alpha">PROTO v0.2.0</span>
+                                </div>
+                                <div class="game-tags">
+                                    <span class="tag tag--featured">Luau</span>
+                                    <span class="tag">Modular Systems</span>
+                                    <span class="tag">Procedural Generation</span>
+                                    <span class="tag">Physics Sandbox</span>
+                                </div>
+                            </div>
+
+                            <p class="game-desc">
+                                Zero-G space station construction and orbital physics sandbox. Snap together life-support modules, balance complex oxygen and thermal radiator pipelines, manage high-voltage power conduits, and survive micrometeoroid strikes governed by realistic Newtonian mechanics.
+                            </p>
+
+                            <ul class="game-features">
+                                <li><span class="check">&#10003;</span> Custom 6-DOF Newtonian physics solver with real orbital drift vectors</li>
+                                <li><span class="check">&#10003;</span> Dynamic gas diffusion, atmospheric decompression, and electrical piping sim</li>
+                                <li><span class="check">&#10003;</span> Snap-to-grid modular docking system with customized component blueprints</li>
+                            </ul>
+
+                            <div class="game-actions">
+                                <button class="aero-btn aero-btn--primary" type="button" data-launch="orbital">
+                                    &#9658; Launch Sandbox
+                                </button>
+                                <a href="https://github.com/Bitter130" target="_blank" rel="noopener noreferrer" class="aero-btn">
+                                    &#128187; Source Code
+                                </a>
+                                <button class="aero-btn aero-btn--copy" type="button" data-copy-id="5">
+                                    &#128203; Copy Template
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="statusbar">
+                        <span>Status: Physics Sandbox</span>
+                        <span>Modules: 18 Types</span>
+                        <span>Gravity: Micro-G (0.02 m/s²)</span>
+                        <span>Build: 2026.08</span>
+                    </div>
+                </div>
+            </section>
+            <!-- GAME TEMPLATE 5 END -->
+
+
+            <!-- ============ GAME 6: CYBERCRYPT ============ -->
+            <!-- GAME TEMPLATE 6 START -->
+            <section class="win game-card" data-win="CyberCrypt" data-tags="Python,Procedural,Pixel Art" style="--float-dur: 8.6s; --float-delay: -5.0s; --drift-x: -13px; --drift-y: -14px; --tilt: 4.5deg; --yaw: -0.30; --roll: -1.6deg; --z-front: 25px; --z-back: -33px; --reveal-delay: 0.42s;">
+                <header class="win__bar">
+                    <span class="win__icon" aria-hidden="true">&#9670;</span>
+                    <span class="win__title">CyberCrypt: Terminal 88 (Released v1.0)</span>
+                    <span class="win__ctrls">
+                        <button class="win__btn win__btn--min" type="button" aria-label="Minimize"><i></i></button>
+                        <button class="win__btn win__btn--max" type="button" aria-label="Maximize"><i></i></button>
+                        <button class="win__btn win__btn--close" type="button" aria-label="Close"><i></i></button>
+                    </span>
+                </header>
+                <div class="win__body">
+                    <div class="game-layout">
+                        <!-- Sidebar -->
+                        <div class="game-sidebar">
+                            <div class="game-thumb" data-demo="terminal" title="Click to launch interactive Hacker Terminal">
+                                <!-- Bespoke SVG Hacker Terminal Illustration -->
+                                <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CyberCrypt Terminal Screen">
+                                    <rect width="320" height="200" fill="#080703"/>
+                                    <!-- Amber Phosphor Matrix Stream Lines -->
+                                    <g fill="#ffb703" opacity="0.3" font-family="monospace" font-size="8">
+                                        <text x="10" y="20">0x7F 0x45 0x4C 0x46</text>
+                                        <text x="10" y="32">0x02 0x01 0x01 0x00</text>
+                                        <text x="10" y="44">SYS_CALL: SOCKET_RAW</text>
+                                        <text x="10" y="56">ICE_LEVEL: HEURISTIC</text>
+                                        <text x="10" y="68">NODE_ADDR: 192.168.0.88</text>
+                                    </g>
+                                    <!-- Network Topology Graph -->
+                                    <g stroke="#ffb703" stroke-width="1.2">
+                                        <line x1="160" y1="110" x2="220" y2="70"/>
+                                        <line x1="160" y1="110" x2="250" y2="130"/>
+                                        <line x1="220" y1="70" x2="280" y2="90"/>
+                                        <line x1="250" y1="130" x2="280" y2="90"/>
+                                    </g>
+                                    <circle cx="160" cy="110" r="7" fill="#fb8500" stroke="#fff" stroke-width="1"/>
+                                    <circle cx="220" cy="70" r="5" fill="#ffb703"/>
+                                    <circle cx="250" cy="130" r="5" fill="#ffb703"/>
+                                    <circle cx="280" cy="90" r="8" fill="#ef4444" stroke="#fff" stroke-width="1.5"/> <!-- Target Mainframe -->
+                                    <!-- Terminal Prompt at bottom -->
+                                    <rect x="0" y="150" width="320" height="50" fill="#120e04"/>
+                                    <text x="12" y="172" fill="#ffb703" font-family="monospace" font-size="11" font-weight="bold">root@bitter-term:~$ ./crack_node --force</text>
+                                    <text x="12" y="188" fill="#e87cfe" font-family="monospace" font-size="9">BYPASSING FIREWALL... [94%]</text>
+                                    <rect x="295" y="162" width="6" height="12" fill="#ffb703"/> <!-- Blinking cursor -->
+                                    <!-- HUD Text Top -->
+                                    <text x="12" y="16" fill="#fb8500" font-family="monospace" font-size="10" font-weight="bold">HOST: CORE_MAINFRAME</text>
+                                    <text x="308" y="16" fill="#22c55e" font-family="monospace" font-size="9" text-anchor="end">STATUS: UNLOCKED</text>
+                                </svg>
+                                <div class="game-thumb__play">
+                                    <span class="play-badge">&#9658; Launch Terminal</span>
+                                </div>
+                            </div>
+                            <div class="quick-specs">
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Engine:</span>
+                                    <span class="quick-spec-val">Python / WebGL ASCII</span>
+                                </div>
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Genre:</span>
+                                    <span class="quick-spec-val">Terminal Roguelike</span>
+                                </div>
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Interface:</span>
+                                    <span class="quick-spec-val">UNIX Virtual Shell</span>
+                                </div>
+                                <div class="quick-spec-row">
+                                    <span class="quick-spec-label">Status:</span>
+                                    <span class="quick-spec-val">Released v1.0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="game-content">
+                            <div class="game-header">
+                                <div class="game-title-row">
+                                    <h2 class="game-title">CyberCrypt: Terminal 88</h2>
+                                    <span class="game-status-badge status--released">&#10004; RELEASED v1.0</span>
+                                </div>
+                                <div class="game-tags">
+                                    <span class="tag tag--featured">Python</span>
+                                    <span class="tag">Pixel Art</span>
+                                    <span class="tag">Procedural Generation</span>
+                                    <span class="tag">Cyberpunk</span>
+                                </div>
+                            </div>
+
+                            <p class="game-desc">
+                                Cyberpunk terminal roguelike where you infiltrate secured megacorp mainframes. Navigate procedurally generated network graphs, decrypt encrypted memory buffers, deploy intrusion countermeasures, and bypass adaptive AI ICE firewalls in a retro command-line environment.
+                            </p>
+
+                            <ul class="game-features">
+                                <li><span class="check">&#10003;</span> Simulated UNIX-like terminal shell with 30+ interactive CLI commands</li>
+                                <li><span class="check">&#10003;</span> Procedural node network topology generation with varied security protocols</li>
+                                <li><span class="check">&#10003;</span> Memory hex inspection mini-games and automated scripting support</li>
+                            </ul>
+
+                            <div class="game-actions">
+                                <button class="aero-btn aero-btn--primary" type="button" data-launch="terminal">
+                                    &#9658; Launch Terminal
+                                </button>
+                                <a href="https://github.com/Bitter130" target="_blank" rel="noopener noreferrer" class="aero-btn">
+                                    &#128187; Source Code
+                                </a>
+                                <button class="aero-btn aero-btn--copy" type="button" data-copy-id="6">
+                                    &#128203; Copy Template
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="statusbar">
+                        <span>Status: Full Release</span>
+                        <span>Security Protocol: AES-256</span>
+                        <span>Shell: BitterSH v3.4</span>
+                        <span>Rating: 9.8/10</span>
+                    </div>
+                </div>
+            </section>
+            <!-- GAME TEMPLATE 6 END -->
+
+        </div>
+    </main>
+
+    <!-- ============ INTERACTIVE DEMO MODAL ============ -->
+    <div class="demo-backdrop" id="demoBackdrop" aria-hidden="true">
+        <div class="demo-modal" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="demoTitle">
+            <header class="win__bar">
+                <span class="win__icon" id="demoIcon">&#127918;</span>
+                <span class="win__title" id="demoTitle">Interactive Demo Launcher</span>
+                <span class="win__ctrls">
+                    <button class="win__btn win__btn--close" id="demoCloseBtn" type="button" aria-label="Close Demo"><i></i></button>
+                </span>
+            </header>
+            <div class="demo-canvas-wrap" id="demoCanvasWrap">
+                <canvas class="demo-canvas" id="demoCanvas" width="640" height="320"></canvas>
+            </div>
+            <div class="demo-controls">
+                <div class="demo-info" id="demoInfo">Click anywhere inside the simulation to interact.</div>
+                <div style="display:flex; gap:6px;">
+                    <button class="aero-btn" type="button" id="demoActionBtn">&#8635; Regenerate</button>
+                    <button class="aero-btn aero-btn--primary" type="button" id="demoExitBtn">Exit Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ WINDOWS 7 START MENU ============ -->
+    <div class="start-menu" id="startMenu" aria-hidden="true">
+        <div class="start-menu__header">
+            <img src="../profile.png" alt="Devid Profile" class="start-menu__avatar">
+            <div class="start-menu__user">
+                <h3>Devid</h3>
+                <p>@devid.bitt.five</p>
+            </div>
+        </div>
+        <ul class="start-menu__list">
+            <li class="start-menu__item">
+                <a href="../">
+                    <span class="start-menu__icon">&#127968;</span>
+                    Desktop / About Me
+                </a>
+            </li>
+            <li class="start-menu__item">
+                <a href="./">
+                    <span class="start-menu__icon">&#127918;</span>
+                    Game Gallery (/games)
+                </a>
+            </li>
+            <li class="start-menu__item">
+                <a href="https://github.com/Bitter130" target="_blank" rel="noopener noreferrer">
+                    <span class="start-menu__icon">&#128187;</span>
+                    GitHub (@Bitter130)
+                </a>
+            </li>
+            <li class="start-menu__item">
+                <button type="button" id="menuCopyTemplateBtn">
+                    <span class="start-menu__icon">&#128203;</span>
+                    Copy Blank Game Template
+                </button>
+            </li>
+            <li class="start-menu__item">
+                <button type="button" id="menuTiltBtn">
+                    <span class="start-menu__icon">&#127922;</span>
+                    Re-align Windows
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ============ TASKBAR ============ -->
+    <div class="taskbar">
+        <button class="orb" id="orb" type="button" aria-label="Start Menu" title="Click to open BitterOS Start Menu">
+            <span class="orb__flag" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+        </button>
+        <div class="tasks" id="tasks"></div>
+        <div class="clock" id="clock">--:--</div>
+    </div>
+
+    <!-- ============ TOAST NOTIFICATION ============ -->
+    <div class="aero-toast" id="aeroToast">
+        <span class="aero-toast__icon">&#10004;</span>
+        <span id="toastMsg">Template copied to clipboard!</span>
+    </div>
+
+    <!-- ============ SCRIPTS ============ -->
+    <script>
+    (function () {
+        document.documentElement.classList.add('revealed');
+
+        /* ---------------- Taskbar Clock ---------------- */
+        const clock = document.getElementById('clock');
+        function tick() {
+            const n = new Date();
+            let h = n.getHours();
+            const ampm = h >= 12 ? 'PM' : 'AM';
+            h = h % 12 || 12;
+            const m = String(n.getMinutes()).padStart(2, '0');
+            clock.textContent = h + ':' + m + ' ' + ampm;
+        }
+        tick();
+        setInterval(tick, 15000);
+
+        /* ---------------- Taskbar buttons from Windows ---------------- */
+        const tasks = document.getElementById('tasks');
+        const wins = [...document.querySelectorAll('.win')];
+        const buttons = new Map();
+
+        function buildTaskbar() {
+            tasks.innerHTML = '';
+            buttons.clear();
+            wins.forEach((w) => {
+                if (w.classList.contains('is-hidden') || w.hidden) return;
+                const name = w.dataset.win;
+                const b = document.createElement('button');
+                b.className = 'task';
+                b.type = 'button';
+                b.title = name;
+                b.innerHTML = '<span class="task__dot"></span>' + name;
+                b.addEventListener('click', () => {
+                    w.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    focusWin(w);
+                });
+                tasks.appendChild(b);
+                buttons.set(w, b);
+            });
+        }
+        buildTaskbar();
+
+        function focusWin(w) {
+            wins.forEach((x) => x.classList.remove('win--focus'));
+            buttons.forEach((b, win) => b.classList.toggle('is-active', win === w));
+            w.classList.add('win--focus');
+        }
+
+        wins.forEach((w) => {
+            w.addEventListener('mouseenter', () => focusWin(w));
+            w.addEventListener('mouseleave', () => w.classList.remove('win--focus'));
+        });
+
+        /* ---------------- Caption Buttons (Min / Max / Close) ---------------- */
+        wins.forEach((w) => {
+            const [min, max, close] = w.querySelectorAll('.win__btn');
+            if (close) {
+                close.addEventListener('click', () => {
+                    w.style.transition = 'opacity .2s ease, transform .2s ease';
+                    w.style.opacity = '0';
+                    w.style.transform = 'scale(.94)';
+                    setTimeout(() => {
+                        w.hidden = true;
+                        w.style.opacity = '';
+                        w.style.transform = '';
+                        w.style.transition = '';
+                        const b = buttons.get(w);
+                        if (b) b.remove();
+                    }, 200);
+                });
+            }
+            if (min) min.addEventListener('click', () => w.classList.toggle('win--min'));
+            if (max) max.addEventListener('click', () => w.classList.toggle('win--max'));
+        });
+
+        /* ---------------- Start Orb & Start Menu ---------------- */
+        const orb = document.getElementById('orb');
+        const startMenu = document.getElementById('startMenu');
+
+        orb.addEventListener('click', (e) => {
+            e.stopPropagation();
+            startMenu.classList.toggle('is-open');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!startMenu.contains(e.target) && e.target !== orb) {
+                startMenu.classList.remove('is-open');
+            }
+        });
+
+        document.getElementById('menuTiltBtn').addEventListener('click', () => {
+            startMenu.classList.remove('is-open');
+            wins.forEach((w, i) => {
+                setTimeout(() => {
+                    w.animate(
+                        [
+                            { transform: 'translateX(-8px) scale(0.98)' },
+                            { transform: 'translateX(0) scale(1)' }
+                        ],
+                        { duration: 340, easing: 'ease-out' }
+                    );
+                }, i * 50);
+            });
+        });
+
+        document.getElementById('shuffleFloatBtn').addEventListener('click', () => {
+            wins.forEach((w) => {
+                const dx = (Math.random() * 24 - 12).toFixed(1) + 'px';
+                const dy = (Math.random() * -18 - 6).toFixed(1) + 'px';
+                const tilt = (Math.random() * 4 + 2).toFixed(1) + 'deg';
+                w.style.setProperty('--drift-x', dx);
+                w.style.setProperty('--drift-y', dy);
+                w.style.setProperty('--tilt', tilt);
+            });
+            showToast('3D Float angles randomized!');
+        });
+
+        /* ---------------- Live Search & Filter ---------------- */
+        const searchInput = document.getElementById('gameSearch');
+        const filterChips = document.querySelectorAll('.filter-chip');
+        const gameCards = document.querySelectorAll('.game-card');
+        const matchCounter = document.getElementById('matchCounter');
+
+        let activeFilter = 'all';
+
+        function applyFilters() {
+            const query = (searchInput.value || '').trim().toLowerCase();
+            let visibleCount = 0;
+
+            gameCards.forEach((card) => {
+                const title = card.querySelector('.game-title').textContent.toLowerCase();
+                const desc = card.querySelector('.game-desc').textContent.toLowerCase();
+                const tags = (card.dataset.tags || '').toLowerCase();
+                const matchesQuery = !query || title.includes(query) || desc.includes(query) || tags.includes(query);
+
+                let matchesTag = true;
+                if (activeFilter !== 'all') {
+                    matchesTag = tags.includes(activeFilter.toLowerCase());
+                }
+
+                if (matchesQuery && matchesTag) {
+                    card.classList.remove('is-hidden');
+                    visibleCount++;
+                } else {
+                    card.classList.add('is-hidden');
+                }
+            });
+
+            matchCounter.textContent = visibleCount + (visibleCount === 1 ? ' item found' : ' items found');
+            buildTaskbar();
+        }
+
+        searchInput.addEventListener('input', applyFilters);
+
+        filterChips.forEach((chip) => {
+            chip.addEventListener('click', () => {
+                filterChips.forEach((c) => c.classList.remove('is-active'));
+                chip.classList.add('is-active');
+                activeFilter = chip.dataset.filter;
+                applyFilters();
+            });
+        });
+
+        document.getElementById('refreshBtn').addEventListener('click', () => {
+            searchInput.value = '';
+            activeFilter = 'all';
+            filterChips.forEach((c) => c.classList.toggle('is-active', c.dataset.filter === 'all'));
+            gameCards.forEach((c) => { c.hidden = false; c.classList.remove('is-hidden', 'win--min'); });
+            applyFilters();
+            showToast('Game Gallery refreshed');
+        });
+
+        /* ---------------- Toast Notification ---------------- */
+        const toast = document.getElementById('aeroToast');
+        const toastMsg = document.getElementById('toastMsg');
+        let toastTimer = null;
+
+        function showToast(msg) {
+            toastMsg.textContent = msg;
+            toast.classList.add('is-visible');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => {
+                toast.classList.remove('is-visible');
+            }, 2600);
+        }
+
+        /* ---------------- Copy Template Handler ---------------- */
+        const blankTemplateHTML = `<!-- GAME TEMPLATE START -->
+<section class="win game-card" data-win="Your Game Title" data-tags="Genre1,Genre2,Luau" style="--float-dur: 8.0s; --float-delay: 0s; --drift-x: 10px; --drift-y: -14px; --tilt: 3.5deg; --yaw: 0.3; --roll: 1.2deg; --z-front: 20px; --z-back: -28px;">
+    <header class="win__bar">
+        <span class="win__icon" aria-hidden="true">&#9670;</span>
+        <span class="win__title">Your Game Title (v1.0)</span>
+        <span class="win__ctrls">
+            <button class="win__btn win__btn--min" type="button" aria-label="Minimize"><i></i></button>
+            <button class="win__btn win__btn--max" type="button" aria-label="Maximize"><i></i></button>
+            <button class="win__btn win__btn--close" type="button" aria-label="Close"><i></i></button>
+        </span>
+    </header>
+    <div class="win__body">
+        <div class="game-layout">
+            <div class="game-sidebar">
+                <div class="game-thumb">
+                    <!-- Replace with <img src="your-thumb.png" alt="Game Preview"> -->
+                    <div style="display:grid;place-items:center;height:100%;color:#c4b5d6;font-family:monospace;font-size:12px;">
+                        [Thumbnail / Image Here]
+                    </div>
+                </div>
+                <div class="quick-specs">
+                    <div class="quick-spec-row"><span class="quick-spec-label">Engine:</span><span class="quick-spec-val">Luau / Python</span></div>
+                    <div class="quick-spec-row"><span class="quick-spec-label">Genre:</span><span class="quick-spec-val">Roguelike / Horror</span></div>
+                    <div class="quick-spec-row"><span class="quick-spec-label">Status:</span><span class="quick-spec-val">Playable v1.0</span></div>
+                </div>
+            </div>
+            <div class="game-content">
+                <div class="game-header">
+                    <div class="game-title-row">
+                        <h2 class="game-title">Your Game Title</h2>
+                        <span class="game-status-badge status--dev">IN DEVELOPMENT</span>
+                    </div>
+                    <div class="game-tags">
+                        <span class="tag tag--featured">Luau</span>
+                        <span class="tag">Procedural Generation</span>
+                    </div>
+                </div>
+                <p class="game-desc">Write an engaging description of your game mechanics, atmosphere, and tech architecture here.</p>
+                <ul class="game-features">
+                    <li><span class="check">&#10003;</span> Feature point 1</li>
+                    <li><span class="check">&#10003;</span> Feature point 2</li>
+                </ul>
+                <div class="game-actions">
+                    <a href="#" class="aero-btn aero-btn--primary">&#9658; Play Game</a>
+                    <a href="#" class="aero-btn">&#128187; GitHub</a>
+                </div>
+            </div>
+        </div>
+        <div class="statusbar">
+            <span>Status: Ready</span>
+            <span>Platform: PC</span>
+        </div>
+    </div>
+</section>
+<!-- GAME TEMPLATE END -->`;
+
+        function copyToClipboard(text, successMsg) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showToast(successMsg);
+                }).catch(() => {
+                    fallbackCopy(text, successMsg);
+                });
+            } else {
+                fallbackCopy(text, successMsg);
+            }
+        }
+
+        function fallbackCopy(text, successMsg) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            showToast(successMsg);
+        }
+
+        document.getElementById('copyBlankTemplateBtn').addEventListener('click', () => {
+            copyToClipboard(blankTemplateHTML, 'Blank game template copied!');
+        });
+
+        document.getElementById('menuCopyTemplateBtn').addEventListener('click', () => {
+            startMenu.classList.remove('is-open');
+            copyToClipboard(blankTemplateHTML, 'Blank game template copied!');
+        });
+
+        document.querySelectorAll('[data-copy-id]').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const card = btn.closest('.game-card');
+                if (card) {
+                    copyToClipboard(card.outerHTML, 'Game card template copied!');
+                }
+            });
+        });
+
+        /* ---------------- Interactive Demo Launcher & Mini Games ---------------- */
+        const modal = document.getElementById('demoBackdrop');
+        const demoTitle = document.getElementById('demoTitle');
+        const demoIcon = document.getElementById('demoIcon');
+        const demoInfo = document.getElementById('demoInfo');
+        const demoCanvas = document.getElementById('demoCanvas');
+        const ctx = demoCanvas.getContext('2d');
+        const demoActionBtn = document.getElementById('demoActionBtn');
+
+        let activeSim = null;
+        let animFrameId = null;
+
+        function openDemo(type) {
+            modal.classList.add('is-open');
+            if (animFrameId) cancelAnimationFrame(animFrameId);
+
+            if (type === 'sonar') {
+                initSonarSim();
+            } else if (type === 'time') {
+                initTimeSim();
+            } else if (type === 'dungeon') {
+                initDungeonSim();
+            } else if (type === 'static') {
+                initStaticSim();
+            } else if (type === 'orbital') {
+                initOrbitalSim();
+            } else if (type === 'terminal') {
+                initTerminalSim();
+            }
+        }
+
+        function closeDemo() {
+            modal.classList.remove('is-open');
+            if (animFrameId) cancelAnimationFrame(animFrameId);
+            activeSim = null;
+        }
+
+        document.getElementById('demoCloseBtn').addEventListener('click', closeDemo);
+        document.getElementById('demoExitBtn').addEventListener('click', closeDemo);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeDemo();
+        });
+
+        document.querySelectorAll('[data-launch]').forEach((btn) => {
+            btn.addEventListener('click', () => openDemo(btn.dataset.launch));
+        });
+
+        document.querySelectorAll('.game-thumb[data-demo]').forEach((thumb) => {
+            thumb.addEventListener('click', () => openDemo(thumb.dataset.demo));
+        });
+
+        /* --- Sim 1: Abyssal Descent Sonar Radar --- */
+        function initSonarSim() {
+            demoTitle.textContent = 'Abyssal Descent - Sonar Hydrophone Simulation';
+            demoIcon.textContent = '⚓';
+            demoInfo.textContent = 'Click inside to transmit an acoustic sonar ping. Watch for underwater echoes.';
+            demoActionBtn.textContent = 'Transmit High-Yield Ping';
+
+            const w = demoCanvas.width;
+            const h = demoCanvas.height;
+            const cx = w / 2;
+            const cy = h / 2;
+            let sweepAngle = 0;
+            const pings = [];
+            const blips = [
+                { x: cx - 110, y: cy - 40, size: 8, life: 0, label: 'LEVIATHAN #09' },
+                { x: cx + 130, y: cy + 50, size: 5, life: 0, label: 'VENT CHASM' },
+                { x: cx - 60, y: cy + 70, size: 4, life: 0, label: 'DEBRIS' }
+            ];
+
+            function ping(x, y) {
+                pings.push({ x: x || cx, y: y || cy, r: 5, alpha: 1 });
+            }
+
+            demoCanvas.onclick = (e) => {
+                const rect = demoCanvas.getBoundingClientRect();
+                const scaleX = demoCanvas.width / rect.width;
+                const scaleY = demoCanvas.height / rect.height;
+                const clickX = (e.clientX - rect.left) * scaleX;
+                const clickY = (e.clientY - rect.top) * scaleY;
+                ping(clickX, clickY);
+            };
+
+            demoActionBtn.onclick = () => ping(cx, cy);
+
+            function loop() {
+                ctx.fillStyle = 'rgba(3, 9, 16, 0.25)';
+                ctx.fillRect(0, 0, w, h);
+
+                // Sonar Grid Rings
+                ctx.strokeStyle = 'rgba(0, 229, 255, 0.2)';
+                ctx.lineWidth = 1;
+                for (let r = 40; r <= 140; r += 35) {
+                    ctx.beginPath();
+                    ctx.arc(cx, cy, r, 0, Math.PI * 2);
+                    ctx.stroke();
+                }
+
+                // Crosshairs
+                ctx.beginPath();
+                ctx.moveTo(cx - 150, cy); ctx.lineTo(cx + 150, cy);
+                ctx.moveTo(cx, cy - 150); ctx.lineTo(cx, cy + 150);
+                ctx.stroke();
+
+                // Sweep line
+                sweepAngle += 0.035;
+                const sx = cx + Math.cos(sweepAngle) * 145;
+                const sy = cy + Math.sin(sweepAngle) * 145;
+
+                ctx.strokeStyle = '#00e5ff';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(cx, cy);
+                ctx.lineTo(sx, sy);
+                ctx.stroke();
+
+                // Ping waves
+                for (let i = pings.length - 1; i >= 0; i--) {
+                    const p = pings[i];
+                    p.r += 3.5;
+                    p.alpha -= 0.015;
+                    ctx.strokeStyle = `rgba(232, 124, 254, ${Math.max(0, p.alpha)})`;
+                    ctx.lineWidth = 2;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.stroke();
+
+                    // Check collisions with blips
+                    blips.forEach((b) => {
+                        const dist = Math.hypot(b.x - p.x, b.y - p.y);
+                        if (Math.abs(dist - p.r) < 8) b.life = 1;
+                    });
+
+                    if (p.alpha <= 0) pings.splice(i, 1);
+                }
+
+                // Draw Blips
+                blips.forEach((b) => {
+                    if (b.life > 0) {
+                        ctx.fillStyle = `rgba(255, 64, 129, ${b.life})`;
+                        ctx.beginPath();
+                        ctx.arc(b.x, b.y, b.size, 0, Math.PI * 2);
+                        ctx.fill();
+
+                        ctx.fillStyle = `rgba(0, 229, 255, ${b.life})`;
+                        ctx.font = '10px monospace';
+                        ctx.fillText(b.label, b.x + 10, b.y - 5);
+
+                        b.life -= 0.008;
+                    }
+                });
+
+                // HUD overlay
+                ctx.fillStyle = '#00e5ff';
+                ctx.font = '11px monospace';
+                ctx.fillText('HYDROPHONE ARRAY: ACTIVE | DEPTH: -4,120M', 15, 25);
+                ctx.fillText(`SWEEP AZIMUTH: ${(sweepAngle % (Math.PI*2) * (180/Math.PI)).toFixed(0)}°`, 15, 42);
+
+                animFrameId = requestAnimationFrame(loop);
+            }
+            loop();
+        }
+
+        /* --- Sim 2: Chrono Shift Time Rewind Simulator --- */
+        function initTimeSim() {
+            demoTitle.textContent = 'Chrono Shift - Quantum Time Rewind Chamber';
+            demoIcon.textContent = '⏳';
+            demoInfo.textContent = 'Drag or click to attract particles. Click Reverse Time to rewind history!';
+            demoActionBtn.textContent = 'Reverse Time Flow';
+
+            const w = demoCanvas.width;
+            const h = demoCanvas.height;
+            let particles = [];
+            const history = [];
+            let isRewinding = false;
+
+            for (let i = 0; i < 75; i++) {
+                particles.push({
+                    x: Math.random() * w,
+                    y: Math.random() * h,
+                    vx: (Math.random() - 0.5) * 3,
+                    vy: (Math.random() - 0.5) * 3,
+                    color: Math.random() > 0.5 ? '#e87cfe' : '#38bdf8'
+                });
+            }
+
+            demoCanvas.onmousemove = (e) => {
+                if (isRewinding) return;
+                const rect = demoCanvas.getBoundingClientRect();
+                const mx = (e.clientX - rect.left) * (w / rect.width);
+                const my = (e.clientY - rect.top) * (h / rect.height);
+                particles.forEach((p) => {
+                    const dx = mx - p.x;
+                    const dy = my - p.y;
+                    const dist = Math.hypot(dx, dy);
+                    if (dist < 100) {
+                        p.vx += (dx / dist) * 0.4;
+                        p.vy += (dy / dist) * 0.4;
+                    }
+                });
+            };
+
+            demoActionBtn.onclick = () => {
+                isRewinding = !isRewinding;
+                demoActionBtn.textContent = isRewinding ? 'Resume Forward Time' : 'Reverse Time Flow';
+            };
+
+            function loop() {
+                ctx.fillStyle = 'rgba(13, 8, 25, 0.3)';
+                ctx.fillRect(0, 0, w, h);
+
+                if (!isRewinding) {
+                    // Record snapshot
+                    const snap = particles.map((p) => ({ x: p.x, y: p.y, color: p.color }));
+                    history.push(snap);
+                    if (history.length > 250) history.shift();
+
+                    // Physics update
+                    particles.forEach((p) => {
+                        p.x += p.vx;
+                        p.y += p.vy;
+                        p.vx *= 0.98;
+                        p.vy *= 0.98;
+                        if (p.x < 0 || p.x > w) p.vx *= -1;
+                        if (p.y < 0 || p.y > h) p.vy *= -1;
+
+                        ctx.fillStyle = p.color;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, 3, 0, Math.PI * 2);
+                        ctx.fill();
+                    });
+                } else {
+                    // Rewind from history
+                    if (history.length > 0) {
+                        const snap = history.pop();
+                        snap.forEach((p) => {
+                            ctx.fillStyle = p.color;
+                            ctx.beginPath();
+                            ctx.arc(p.x, p.y, 3.5, 0, Math.PI * 2);
+                            ctx.fill();
+                        });
+                    } else {
+                        isRewinding = false;
+                        demoActionBtn.textContent = 'Reverse Time Flow';
+                    }
+                }
+
+                ctx.fillStyle = isRewinding ? '#ff4081' : '#38bdf8';
+                ctx.font = '12px monospace';
+                ctx.fillText(isRewinding ? '<<< REWINDING TEMPORAL BUFFER <<<' : '>>> CHRONO STREAM: FORWARD >>>', 15, 25);
+                ctx.fillText(`BUFFER FRAMES: ${history.length} / 250`, 15, 42);
+
+                animFrameId = requestAnimationFrame(loop);
+            }
+            loop();
+        }
+
+        /* --- Sim 3: Void Walker Procedural Dungeon Generator --- */
+        function initDungeonSim() {
+            demoTitle.textContent = 'Void Walker - Procedural BSP Dungeon Generator';
+            demoIcon.textContent = '⚔️';
+            demoInfo.textContent = 'Interactive BSP (Binary Space Partitioning) algorithm generator with room connecting corridors.';
+            demoActionBtn.textContent = 'Generate New Seed';
+
+            const w = demoCanvas.width;
+            const h = demoCanvas.height;
+
+            function generateDungeon() {
+                ctx.fillStyle = '#0f0a1c';
+                ctx.fillRect(0, 0, w, h);
+
+                const gridW = 32;
+                const gridH = 16;
+                const cellW = w / gridW;
+                const cellH = h / gridH;
+
+                // Rooms
+                const rooms = [];
+                const numRooms = Math.floor(Math.random() * 5) + 6;
+
+                for (let i = 0; i < numRooms; i++) {
+                    const rw = Math.floor(Math.random() * 5) + 4;
+                    const rh = Math.floor(Math.random() * 4) + 3;
+                    const rx = Math.floor(Math.random() * (gridW - rw - 2)) + 1;
+                    const ry = Math.floor(Math.random() * (gridH - rh - 2)) + 1;
+                    rooms.push({ x: rx, y: ry, w: rw, h: rh });
+                }
+
+                // Draw Corridors
+                ctx.fillStyle = '#26173d';
+                for (let i = 0; i < rooms.length - 1; i++) {
+                    const r1 = rooms[i];
+                    const r2 = rooms[i + 1];
+                    const cx1 = (r1.x + r1.w / 2) * cellW;
+                    const cy1 = (r1.y + r1.h / 2) * cellH;
+                    const cx2 = (r2.x + r2.w / 2) * cellW;
+                    const cy2 = (r2.y + r2.h / 2) * cellH;
+
+                    ctx.fillRect(Math.min(cx1, cx2), cy1 - cellH / 2, Math.abs(cx2 - cx1) + cellW, cellH);
+                    ctx.fillRect(cx2 - cellW / 2, Math.min(cy1, cy2), cellW, Math.abs(cy2 - cy1) + cellH);
+                }
+
+                // Draw Rooms
+                rooms.forEach((r, idx) => {
+                    ctx.fillStyle = '#1c102e';
+                    ctx.strokeStyle = idx === 0 ? '#38bdf8' : '#e87cfe';
+                    ctx.lineWidth = 2;
+                    ctx.fillRect(r.x * cellW, r.y * cellH, r.w * cellW, r.h * cellH);
+                    ctx.strokeRect(r.x * cellW, r.y * cellH, r.w * cellW, r.h * cellH);
+
+                    // Torch or altar in room center
+                    ctx.fillStyle = idx === 0 ? '#38bdf8' : '#ffd700';
+                    ctx.beginPath();
+                    ctx.arc((r.x + r.w / 2) * cellW, (r.y + r.h / 2) * cellH, 4, 0, Math.PI * 2);
+                    ctx.fill();
+                });
+
+                // HUD overlay
+                ctx.fillStyle = '#e87cfe';
+                ctx.font = '12px monospace';
+                const seed = Math.floor(Math.random() * 90000) + 10000;
+                ctx.fillText(`BSP SEED: #${seed} | ROOMS GENERATED: ${rooms.length}`, 15, 25);
+                ctx.fillStyle = '#38bdf8';
+                ctx.fillText('SPAWN: (BLUE ALTAR) | BOSS ROOM: (PURPLE RECT)', 15, 42);
+            }
+
+            demoActionBtn.onclick = generateDungeon;
+            generateDungeon();
+        }
+
+        /* --- Sim 4: Echoes of Static Oscilloscope --- */
+        function initStaticSim() {
+            demoTitle.textContent = 'Echoes of Static - RF Frequency Oscilloscope';
+            demoIcon.textContent = '📻';
+            demoInfo.textContent = 'Click to disrupt radio frequency harmonics. Decipher encrypted transmissions.';
+            demoActionBtn.textContent = 'Tune Frequency Dial';
+
+            const w = demoCanvas.width;
+            const h = demoCanvas.height;
+            let freq = 0.05;
+            let noiseIntensity = 12;
+
+            demoCanvas.onclick = () => {
+                freq = Math.random() * 0.12 + 0.02;
+                noiseIntensity = Math.random() * 25 + 5;
+            };
+
+            demoActionBtn.onclick = () => {
+                freq = Math.random() * 0.12 + 0.02;
+            };
+
+            let t = 0;
+            function loop() {
+                ctx.fillStyle = 'rgba(4, 12, 6, 0.2)';
+                ctx.fillRect(0, 0, w, h);
+
+                // Oscilloscope grid
+                ctx.strokeStyle = '#0e3314';
+                ctx.lineWidth = 1;
+                for (let x = 0; x < w; x += 40) {
+                    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
+                }
+                for (let y = 0; y < h; y += 40) {
+                    ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
+                }
+
+                // Audio Wave
+                ctx.strokeStyle = '#39ff14';
+                ctx.lineWidth = 2.5;
+                ctx.beginPath();
+                for (let x = 0; x < w; x++) {
+                    const noise = (Math.random() - 0.5) * noiseIntensity;
+                    const y = h / 2 + Math.sin(x * freq + t) * 45 + Math.cos(x * 0.02 - t) * 20 + noise;
+                    if (x === 0) ctx.moveTo(x, y);
+                    else ctx.lineTo(x, y);
+                }
+                ctx.stroke();
+
+                t += 0.08;
+
+                ctx.fillStyle = '#39ff14';
+                ctx.font = '11px monospace';
+                ctx.fillText(`BANDWIDTH: 142.85 MHz | CARRIER: ${(freq * 1000).toFixed(1)} kHz | SIGNAL LOCK: 94%`, 15, 25);
+                ctx.fillText('SURVEILLANCE TOWER 04: NO INTRUDERS DETECTED... YET', 15, 42);
+
+                animFrameId = requestAnimationFrame(loop);
+            }
+            loop();
+        }
+
+        /* --- Sim 5: Modular Orbital Physics Sandbox --- */
+        function initOrbitalSim() {
+            demoTitle.textContent = 'Modular Orbital - Zero-G Newtonian Orbit Solver';
+            demoIcon.textContent = '🚀';
+            demoInfo.textContent = 'Click anywhere to deploy satellites with tangential velocity vectors.';
+            demoActionBtn.textContent = 'Clear Space Debris';
+
+            const w = demoCanvas.width;
+            const h = demoCanvas.height;
+            const cx = w / 2;
+            const cy = h / 2;
+            const planetR = 36;
+            let bodies = [];
+
+            function spawnBodies() {
+                bodies = [
+                    { x: cx, y: cy - 90, vx: 2.2, vy: 0, r: 4, color: '#38bdf8', trail: [] },
+                    { x: cx, y: cy + 120, vx: -1.9, vy: 0, r: 5, color: '#e87cfe', trail: [] },
+                    { x: cx - 110, y: cy, vx: 0, vy: -2.0, r: 3, color: '#ffd700', trail: [] }
+                ];
+            }
+            spawnBodies();
+
+            demoCanvas.onclick = (e) => {
+                const rect = demoCanvas.getBoundingClientRect();
+                const x = (e.clientX - rect.left) * (w / rect.width);
+                const y = (e.clientY - rect.top) * (h / rect.height);
+                const dx = x - cx;
+                const dy = y - cy;
+                const dist = Math.hypot(dx, dy);
+                const speed = 2.2;
+                bodies.push({
+                    x: x,
+                    y: y,
+                    vx: (-dy / dist) * speed,
+                    vy: (dx / dist) * speed,
+                    r: 4,
+                    color: '#a855f7',
+                    trail: []
+                });
+            };
+
+            demoActionBtn.onclick = spawnBodies;
+
+            function loop() {
+                ctx.fillStyle = 'rgba(6, 2, 18, 0.25)';
+                ctx.fillRect(0, 0, w, h);
+
+                // Planet
+                ctx.fillStyle = '#4a157a';
+                ctx.beginPath();
+                ctx.arc(cx, cy, planetR, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.strokeStyle = '#e87cfe';
+                ctx.stroke();
+
+                // Gravity solver
+                bodies.forEach((b) => {
+                    const dx = cx - b.x;
+                    const dy = cy - b.y;
+                    const dist = Math.hypot(dx, dy);
+                    if (dist > planetR) {
+                        const force = 480 / (dist * dist);
+                        b.vx += (dx / dist) * force;
+                        b.vy += (dy / dist) * force;
+                        b.x += b.vx;
+                        b.y += b.vy;
+                    }
+
+                    b.trail.push({ x: b.x, y: b.y });
+                    if (b.trail.length > 30) b.trail.shift();
+
+                    // Trail
+                    ctx.strokeStyle = b.color;
+                    ctx.lineWidth = 1;
+                    ctx.beginPath();
+                    b.trail.forEach((t, idx) => {
+                        if (idx === 0) ctx.moveTo(t.x, t.y);
+                        else ctx.lineTo(t.x, t.y);
+                    });
+                    ctx.stroke();
+
+                    // Body
+                    ctx.fillStyle = b.color;
+                    ctx.beginPath();
+                    ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+                    ctx.fill();
+                });
+
+                ctx.fillStyle = '#38bdf8';
+                ctx.font = '11px monospace';
+                ctx.fillText(`ACTIVE BODIES: ${bodies.length} | NEWTON GRAV: G*M/r^2`, 15, 25);
+
+                animFrameId = requestAnimationFrame(loop);
+            }
+            loop();
+        }
+
+        /* --- Sim 6: CyberCrypt Terminal 88 --- */
+        function initTerminalSim() {
+            demoTitle.textContent = 'CyberCrypt: Terminal 88 - UNIX Shell';
+            demoIcon.textContent = '💻';
+            demoInfo.textContent = 'Interactive Hacker Shell. Click inside to type commands: help, scan, hack, clear.';
+            demoActionBtn.textContent = 'Run Auto-Exploit';
+
+            const w = demoCanvas.width;
+            const h = demoCanvas.height;
+            const lines = [
+                'BitterOS UNIX Subsystem v3.4 [x86_64]',
+                'Type "help" for available commands.',
+                '------------------------------------',
+                'root@terminal-88:~$ scan',
+                '[+] Scanning 192.168.1.0/24 subnet...',
+                '[+] 192.168.1.42 (PORT 22 SSH) - OPEN',
+                '[+] 192.168.1.88 (CORE MAINFRAME) - VULNERABLE',
+                'root@terminal-88:~$ _'
+            ];
+
+            let inputBuffer = '';
+
+            window.onkeydown = (e) => {
+                if (!modal.classList.contains('is-open')) return;
+                if (e.key === 'Backspace') {
+                    inputBuffer = inputBuffer.slice(0, -1);
+                } else if (e.key === 'Enter') {
+                    const cmd = inputBuffer.trim().toLowerCase();
+                    lines[lines.length - 1] = 'root@terminal-88:~$ ' + inputBuffer;
+                    if (cmd === 'help') {
+                        lines.push('Available: help, scan, hack, status, clear');
+                    } else if (cmd === 'scan') {
+                        lines.push('[+] Node 88 ICE status: HEURISTIC 28%');
+                    } else if (cmd === 'hack') {
+                        lines.push('[+] INJECTING BUFFER OVERFLOW EXPLOIT...');
+                        lines.push('[***] ROOT ACCESS GRANTED! AES KEY EXFILTRATED.');
+                    } else if (cmd === 'status') {
+                        lines.push('SYSTEM INTEGRITY: 100% | FIREWALL: BYPASSED');
+                    } else if (cmd === 'clear') {
+                        lines.length = 0;
+                    } else if (cmd) {
+                        lines.push(`bash: ${cmd}: command not found`);
+                    }
+                    lines.push('root@terminal-88:~$ _');
+                    inputBuffer = '';
+                } else if (e.key.length === 1) {
+                    inputBuffer += e.key;
+                }
+            };
+
+            demoActionBtn.onclick = () => {
+                lines.push('root@terminal-88:~$ auto_exploit --force');
+                lines.push('[+] OVERRIDING ICE COUNTERMEASURES...');
+                lines.push('[+] 0x7FFF5FBFF440 POINTER CORRUPTED');
+                lines.push('[***] ACCESS LEVEL: PRIVILEGED ADMINISTRATOR');
+                lines.push('root@terminal-88:~$ _');
+            };
+
+            function render() {
+                ctx.fillStyle = '#080602';
+                ctx.fillRect(0, 0, w, h);
+
+                ctx.fillStyle = '#ffb703';
+                ctx.font = '13px monospace';
+
+                const startY = 30;
+                const lineHeight = 18;
+                const visibleLines = lines.slice(-14);
+
+                visibleLines.forEach((l, idx) => {
+                    if (idx === visibleLines.length - 1) {
+                        ctx.fillText('root@terminal-88:~$ ' + inputBuffer + (Math.floor(Date.now() / 450) % 2 === 0 ? '█' : ''), 15, startY + idx * lineHeight);
+                    } else {
+                        ctx.fillText(l, 15, startY + idx * lineHeight);
+                    }
+                });
+
+                animFrameId = requestAnimationFrame(render);
+            }
+            render();
+        }
+
+    })();
+    </script>
+</body>
+</html>
