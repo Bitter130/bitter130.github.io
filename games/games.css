@@ -538,6 +538,44 @@ body {
     transform: scale(1.04);
 }
 
+/* Template Placeholder Inside Thumbnail */
+.game-thumb__placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1b122c 0%, #0d0718 100%);
+    color: #c4b5d6;
+    font-family: var(--mono);
+    text-align: center;
+    padding: 12px;
+    gap: 6px;
+    user-select: none;
+}
+
+.game-thumb__placeholder svg {
+    width: 34px;
+    height: 34px;
+    opacity: 0.7;
+    fill: none;
+    stroke: #d8c7ee;
+    stroke-width: 1.5;
+}
+
+.game-thumb__placeholder span {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: #f1e9fa;
+}
+
+.game-thumb__placeholder small {
+    font-size: 9.5px;
+    color: #9b89b8;
+}
+
 /* Scanline / CRT Sheen */
 .game-thumb::before {
     content: "";
